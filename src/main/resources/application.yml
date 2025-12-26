@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: s3-upload
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+app:
+  upload:
+    bucket-name: bucket-cy
+    region: sa-east-1
+
+localstack:
+  endpoint: http://localhost:4566
+  access-key: test
+  secret-key: test
+  region: ${app.upload.region}
